@@ -1,0 +1,82 @@
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 50px;
+}
+
+
+#Result{
+    margin-top: 20px;
+    border:1px solid grey;
+    width: 800px;
+    height: fit-content;
+    font: size 50px;
+}
+
+body{
+    border: groove 2px ;
+    background-image: url(https://manybackgrounds.com/images/hd/oak-tree-on-water-7mzl7tc8l3yajsew.jpg);
+    height: fit-content;
+    background-attachment: fixed;
+    backdrop-filter: blur(20px);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding: 20px;
+    width: max-content;
+    margin-left: 300px;
+    margin-right: 400px;
+}
+
+.container{
+    display: flex;
+    padding: 2em;
+    justify-content: space-evenly;
+}
+
+.oak{
+    font-size: 18px;
+    line-height: 1em;
+}
+
+.qforRed,.qforWhite,.qforLive{
+    font-size: 18px;
+    line-height: 2em;
+}
+
+button {
+    cursor: pointer;
+}
+
+#clickText, #why-vein-discoloration,#why2,#why3, #why4, #clickText2, #clickText3, #clickText4,#why-foliar,#why-abscission,#why-anomalous,#howText,#protect{
+    cursor: pointer; /* Set cursor to pointer for the 'clickText' element */
+    text-decoration: underline;
+    font-size: 15px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+#img2{
+    width:200px;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+    background-color:cornsilk; /* Background color for the block */
+    padding: 10px; /* Padding for spacing around the text */
+    border: 1px solid rgb(55, 95, 3); /* Border for styling */
+    width: 500px; /* Adjust width as needed */
+    height: auto; 
+}
+
+.visible2 {
+    display: block;
+    background-color: cornsilk;
+    padding:10px;
+    border: 1px solid rdb(55,95,3);
+    width:fit-content;
+    height: auto;
+}

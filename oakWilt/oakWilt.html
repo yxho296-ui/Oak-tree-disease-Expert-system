@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="oakWilt.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <section class="question">
+        <div class="oak">
+            <h1>Oak Wilt Detection System</h1>
+            <h4>Do you know the type of oak?</h4>
+            <label><input type="radio" name="type" value="redOak" checked>Red Oak</label>
+            <br><label><input type="radio" name="type" value="whiteOak" >White Oak</label>
+            <br><label><input type="radio" name="type" value="liveOak" >Live Oak</label>
+            <br><label><input type="radio" name="type" value="no">Not sure</label>
+            <hr>
+        </div>
+        <div id="type" style="display: none;">
+            <h4>Choose the leaves shape of the oak tree</h4>
+            <div class="container" >
+                <label><input type="radio" name="oakType" value="redOak"><img class="redOak" src="https://mdc.mo.gov/sites/default/files/styles/gallery_main_image/public/mo_nature/media/field-guide/northern_red_oak_leaf.jpg?itok=AUVTNbMS" alt="redoak" width="200" height="300"></label>
+                <label><input type="radio" name="oakType" value="whiteOak"><img class="whiteOak" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTS7liEaHnGsnV2HKA89df3bJCu7lEg_K9uQ&s" alt="whiteOak" width="180" height="300"></label>
+                <label><input type="radio" name="oakType" value="liveOak"><img class="liveOak" src="https://www.treehugger.com/thmb/I-1o-zm-Hn24iczV_a4JVjhdzvU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/152846652_10-56af62205f9b58b7d0182bcb.jpg" alt="liveOak" width="200" height="300"></label>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <section class="redOak">
+        <div id="qforRed" style="display: none;">
+            <h4>Choose the symptoms that appeared on the tree</h4>
+            <div class="Vein discoloration" >
+                <div class = "red1">
+                    <p>Q1: Vein turns yellow, bronze or brown?</p>
+                    <img src="https://images.saymedia-content.com/.image/t_share/MTc0MzU1MzE1OTUxNjc0NzI4/lets-talk-about-ohios-oak-tree-diseases.jpg" alt="vein brown" width="200"><br>
+                    <label><input type="radio" value="Vein turns yellow, bronze or brown" name = "vein">Yes</label>
+                    <label><input type="radio" value = "Vein turns yellow, bronze or brown not detected" name="vein">No</label>
+                </div>
+
+                <div class = "red2">
+                    <p>Q2: Surrounded leaf tissue remains green initially?</p>
+                    <img src="https://www.picturethisai.com/image-handle/website_cmsname/image/1080/202645954416082944.jpeg?x-oss-process=image/format,webp/resize,s_422&v=1.3" alt="leaf tissue remain green" width="200"><br>
+                    <label><input type="radio" value="Surrounded leaf tissue remains green initially" name = "leaf tissue">Yes</label>
+                    <label><input type="radio" value = "Surrounded leaf tissue remains green initially not detected" name="leaf tissue">No</label>
+                </div>
+                <br>
+
+                <p id="why-vein-discoloration">Why?</p>
+                <div id="vein-discoloration" class="hidden">
+                Q1 and Q2 are to determine the presence of vein discoloration
+                </div>
+                <hr>
+            </div>
+            
+
+            <div id = "Leaf necrosis" style="display: none;">
+                <div class = "red3">
+                    <p>Q3: Rapid wilting of leaves?</p>
+                    <img src="https://forestrynews.blogs.govdelivery.com/wp-content/uploads/sites/105/2022/06/OakWilt-8-scaled.jpg" alt="rapid wilting of leaves" width="200" ><br>
+                    <label><input type="radio" value="Rapid wilting of leaves" name="rapid wilting">Yes</label>
+                    <label><input type="radio" value="Rapid wilting of leaves not detected" name = "rapid wilting">No</label>
+                </div>
+
+                <div class = "red4">
+                    <p>Q4: Leaf appear water soaked?</p>
+                    <img src="https://i.redd.it/pv0nhzsqx0ub1.jpg" alt="watersoaked" width ="200"><br>
+                    <label><input type="radio" value="Leaf appear water soaked" name="water soaked">Yes</label>
+                    <label><input type="radio" value="Leaf appear water soaked not detected" name = "water soaked">No</label>
+                </div>
+
+                <div class = "red5">
+                    <p>Q5: Browning or yellowing of leaves?</p>
+                    <img src="https://cdn11.bigcommerce.com/s-fxo1ou3uum/images/stencil/1280x1280/products/228/1374/Northern_Red_Oak_Tree_3__25255.1701664762.jpg?c=2" alt="browning" width="200"><br>
+                    <label><input type="radio" value="Browning or yellowing of leaves" name="brown leaves">Yes</label>
+                    <label><input type="radio" value="Browning or yellowing of leaves not detected" name = "brown leaves">No</label>
+                </div>
+
+                <div class = "red6">
+                    <p>Q6: Brown or bronze-colour starts from tips and margin?</p>
+                    <img src ="https://cdn.mos.cms.futurecdn.net/UMpfLZdnkH3WcH3pch5pX3-320-80.jpg" alt="marginbrown" width="200"><br>
+                    <label><input type="radio" value="Brown or bronze-colour starts from tips and margin" name="margin">Yes</label>
+                    <label><input type="radio" value="Brown or bronze-colour starts from tips and margin not detected" name = "margin">No</label>
+                </div>
+
+                <div class = "red7">
+                    <p>Q7: Browning progressing inwards towards the center of leaf?</p>
+                    <img src ="https://fingerlakesinvasives.org/wp-content/uploads/2020/04/1-OakWiltLeaf-JPG-scaled.jpg" alt="center" width="200"><br>
+                    <label><input type="radio" value="Browning progressing inwards towards the center of leaf" name="center">Yes</label>
+                    <label><input type="radio" value="Browning progressing inwards towards the center of leaf not detected" name = "center">No</label>
+                </div>
+                <br>
+                
+                <p id="why2">Why?</p>
+                <div id="necrosis" class="hidden">
+                    Q3 and Q4 are to determine the presence of leaf necrosis.<br>
+                    Q5 is to determine the presence of discolaration.<br>
+                    Q6 and Q7 are to determine the presence of tip burn.<br>
+                    Defoliation and tip burn are the major impact that could lead to leaf necrosis.
+                </div>
+                <hr>
+            </div>
+            
+
+            <div id="Fungal mat" style="display: none;">
+                <div class="red8">
+                    <p>Q8: Bark cracks?</p>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPB4JsgXtabniQWFvFhM99wL127hRuLpwYsQ&s" alt="bark" width="200"><br>
+                    <label><input type="radio" value="Bark cracks" name="bark cracks">Yes</label>
+                    <label><input type="radio" value="Bark cracks not detected" name = "bark cracks">No</label>
+                </div>
+
+                <div class="red9">
+                    <p>Q9: Bark appear moist or tacky?</p>
+                    <img src = "https://arborcareandconsulting.com/sites/arbor/files/styles/hosted_core_square_738px/public/fungal_mat_-_october_20_2020_2.jpg?itok=lqcTxIfN" alt="moist" width="200"><br>
+                    <label><input type="radio" value="Bark appear moist or tacky" name="bark moist">Yes</label>
+                    <label><input type="radio" value="Bark appear moist or tacky not detected" name = "bark moist">No</label>
+                </div>
+                <br>
+
+                <p id="why3">Why?</p>
+                <div id="fungal" class="hidden">
+                    Q8 and Q9 are to determine the presence of fungal mat.
+                </div>
+                <hr>
+            </div>
+            
+
+            <div id="Defoliation" style="display: none;">
+                <div class="red10">
+                    <p>Q10: Rapid loss of leaves from the canopy?</p>
+                    <img src="https://i.redd.it/red-oak-tree-transplanted-1-year-ago-time-to-cut-my-losses-v0-r0yqvw0h0t0d1.jpg?width=2362&format=pjpg&auto=webp&s=54848164a4c6c26256a9f222274f6de0b05da496" alt="loss" width="200"><br>
+                    <label><input type="radio" value="Rapid loss of leaves from the canopy" name="canopy">Yes</label>
+                    <label><input type="radio" value="Rapid loss of leaves from the canopy not detected" name = "canopy">No</label>
+                </div>
+
+                <div class="red11">
+                    <p>Q11: Upper canopy turns brown followed by lower crown in late summer?</p>
+                    <img src="https://forestrynews.blogs.govdelivery.com/wp-content/uploads/sites/105/2021/09/BotryosphaereaCanker1-reduced-file-size-768x1024.jpg" alt="canopy" width="200"><br>
+                    <label><input type="radio" value="Upper crowns turns brown followed by lower crown in late summer" name="crown">Yes</label>
+                    <label><input type="radio" value="Upper crowns turns brown followed by lower crown in late summer not detected" name = "crown">No</label>
+                </div>
+                <br>
+
+                <p id="why4">Why?</p>
+                <div id="defoliation" class="hidden">
+                    Q10 is to determine the presence of defoliation.<br>
+                    Q11 is to determine the presence of canopy browning.<br>
+                    Canopy browning is also one of the cause of defoliation in oak wilt.
+                </div>
+                <hr>
+            </div>
+            
+
+        </div>
+
+    </section>
+            
+    <section class="whiteOak" >
+            <div id="qforWhite" style="display: none;" >
+                <h4>Choose the symptoms that appear to the tree.</h4>
+                <div class = 'foliar discoloration'>
+                    <div class="Q1">
+                        <p>Q1. Leaves turn drab green?</p>
+                        <img src="https://www.elitetreecare.com/wp-content/uploads/2016/07/oak-wilt.jpg" alt="leaves turn drab green" style="top:200px;left:200px;" width="200" height="200"><br>
+                        <label><input type="radio" value="leaves turn drab green" name="drab">yes</label>
+                        <label><input type="radio" value="no" name="drab">no</label>
+                    </div>
+                    <div class="Q2">
+                        <p>Q2. Yellowing of leaves along the vein?</p>
+                        <img src="https://yardandgarden.extension.iastate.edu/files/inline-images/oak_wilt_on_white_oak.jpg" alt="yellowing of leaves along the vein" style="top:200px;left:200px;" width="200" height="200"><br>
+                        <label><input type="radio" value="yellowing of leaves occurs along the vein" name="yellow">yes</label>
+                        <label><input type="radio" value="no" name="yellow">no</label>
+                    </div>
+                    <div class="Q3">
+                        <p>Q3. Leaves remain attached with discolouration only at margins?</p>
+                        <img src="https://www.vtinvasives.org/sites/default/files/styles/colorbox/public/images/invasives/lookalikes/5030049-SMPT.jpg?itok=G6vxs9mL" alt="leaves remain attached with discoloration only at margins" style="top:200px;left:200px;" width="200" height="200"><br>
+                        <label><input type="radio" value="leaves remain attached with discoloration only at margins" name="margin">yes</label>
+                        <label><input type="radio" value="no" name="margin">no</label>
+                    </div>
+                    <p id="why-foliar">Why?</p>
+                    <div id="foliar" class="hidden">
+                        Determine the presence of foliar discoloration.
+                    </div>
+                <hr>
+                </div>
+                <div id="abscission" style="display: none;">
+                    <div class="Q4">
+                        <p>Q4. Fallen leaves accumulate on ground?</p>
+                        <img src="https://www.rwhendricksenco.com/wp-content/uploads/2019/11/fallen-wilted-oak-tree-leaves.jpeg" alt="fallen leaves accumulate on ground" style="top:200px;left:200px;" width="200"><br>
+                        <label><input type="radio" value="fallen leaves accumulate on ground" name="ground">yes</label>
+                        <label><input type="radio" value="no" name="ground">no</label>
+                    </div>
+                    <div class="Q5">
+                        <p>Q5. Rapid leaves drop from one to few branches at a time during summer?</p>
+                        <img src="https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/6HRZ5CGPSJB7ZM3TYANOBGV6J4.jpg" alt="rapid leaves drop from one to few branches" style="top:200px;left:200px;" width="200"><br>
+                        <label><input type="radio" value="rapid leaves drop from one to few branches at a time during summer" name="rapid">yes</label>
+                        <label><input type="radio" value="no" name="rapid">no</label>
+                    </div>
+                    <p id="why-abscission">Why?</p>
+                    <div id="show-abscission" class="hidden">
+                        Determine the presence of abscission.
+                    </div>
+                <hr>
+                </div>
+                
+                <div id="anomalous" style="display: none;">
+                    <div class="Q6">
+                        <p>Q6. Black streaks in new sapwood?</p>
+                        <img src="https://www.lincolnwoodil.org/ImageRepository/Document?documentId=2520" alt="blak steaks in new sapwood" style="top:200px;left:200px;" width="200"><br>
+                        <label><input type="radio" value="black streaks in new sapwood" name="black">yes</label>
+                        <label><input type="radio" value="no" name="black">no</label>
+                    </div>
+                    <div class="Q7">
+                        <p>Q7. Discolouration of foliar?</p>
+                        <img src="https://apps.extension.umn.edu/garden/diagnose/plant/images/oak/disease/pmildew1_600px.jpg" alt="discoloration of foliar" style="top:200px;left:200px;" width="200"><br>
+                        <label><input type="radio" value="discoloration" name="foliar">yes</label>
+                        <label><input type="radio" value="no" name="foliar">no</label>
+                    </div>
+                    <div class="Q8">
+                        <p>Q8. Dieback in the crown of tree?</p>
+                        <img src="https://forestrynews.blogs.govdelivery.com/wp-content/uploads/sites/105/2018/08/Bur_oak_Fig3.jpg" alt="dieback in the crown of tree" style="top:200px;left:200px;" width="200"><br>
+                        <label><input type="radio" value="dieback in the crown of tree" name="dieback">yes</label>
+                        <label><input type="radio" value="no" name="dieback">no</label>
+                    </div>
+                    <p id="why-anomalous">Why?</p>
+                    <div id="show-anomalous" class="hidden">
+                        Determine the presence of foliar discoloration.
+                    </div>
+                <hr>
+                </div>
+            </div>
+    </section>
+
+    <section class="liveOak">
+        <div class="LiveOakSymptoms">
+        <div id="canopyYellowing" style="display: none;">
+            <h4>Check the symptoms of your oak tree</h4>
+            <div class="question1">
+                <p>Q1: Yellowing of leaves in the canopy?</p>
+                <img  id="img2" src="https://arborcareandconsulting.com/sites/arbor/files/styles/hosted_core_square_738px/public/uploads/images/live_oak_wilt_image_6.jpg?itok=berKoy2V" alt="yellowing of leaves in the canopy" ><br>
+                    <label><input type="radio" value="yellowing of leaves in the canopy" name="yellowLeaves">yes</label>
+                    <label><input type="radio" value="no" name="yellowLeaves">no</label>
+                
+            </div>
+            <div class="question2">
+                <p>Q2: Few Leaves or gaps in the canopy?</p>
+                <img id="img2"  src="https://neilsperry.com/wp-content/uploads/2021/07/7-22-21-Live-oak-with-70-percent-canopy-loss.jpg" ><br>
+                    <label><input type="radio" value="few leaves or gaps in the canopy" name="fewLeaves">yes</label>
+                    <label><input type="radio" value="no" name="fewLeaves">no</label>
+
+            </div><br>
+                <p id="clickText">Why?</p>
+                <div id="canopyYellowingText" class="hidden">
+                Q1 is to determine if the oak tree has the symptoms of canopy yellowing.<br>
+                Q2 is to determine if the oak tree has the symptoms of sparse foliage.<br>
+                If the oak tree has sparse foliage, then it also has canopy yellowing.
+            </div>
+        </div>
+            
+        <div id="leafVein" style="display:none;">
+            <hr>
+            <div class="question3">
+                <p>Q3: Turn the edges of the leaf brown?</p>
+                <img  id="img2" src="https://plantdiseasehandbook.tamu.edu/files/2014/02/Live-Oak-2.jpg" alt="edges leaf brown" ><br>
+                    <label><input type="radio" value="turn the edges of the leaf brown" name="leafBrown">yes</label>
+                    <label><input type="radio" value="no" name="leafBrown">no</label>
+            </div>
+            <div class="question4">
+                <p>Q4: Leaves often develop chlorotic(yellow)?</p>
+                <img  id="img2" src="https://preview.redd.it/p0f2kei00cs81.jpg?width=640&crop=smart&auto=webp&s=d2036b25e786bf268c7814a1f4a8b8889328962b" alt="chlorotic" ><br>
+                    <label><input type="radio" value="leaves often develop chlorotic" name="leavesChlorotic">yes</label>
+                    <label><input type="radio" value="no" name="leavesChlorotic">no</label>
+            </div>
+            <div class="question5">
+                <p>Q5: Veins eventually turns necrotic?</p>
+                <img  id="img2" src="https://oakwiltpros.com/wp-content/uploads/2020/06/necrotic-leaves-in-hand-scaled-e1593189816186.jpg" alt="necrotic" ><br>
+                    <label><input type="radio" value="veins eventually turns necrotic" name="veinsNecrotic">yes</label>
+                    <label><input type="radio" value="no" name="veinsNecrotic">no</label>
+            </div>
+            <div class="question6">
+                <p>Q6: Leaf vein is darker than the rest of the leaf?</p>
+                <img  id="img2" src="https://bugwoodcloud.org/images/768x512/5005036.jpg" alt="leaf vein darker" ><br>
+                    <label><input type="radio" value="leaf vein is darker than the rest of the leaf" name="leafDarker">yes</label>
+                    <label><input type="radio" value="no" name="leafDarker">no</label>
+            <div class="question7">
+                <p>Q7: Yellowing between veins?</p>
+                <img  id="img2" src="https://plantwiseplusknowledgebank.org/cms/10.1079/pwkb.species.12142/asset/38c3d130-dcef-4b51-9de7-f65703c06a77/assets/graphic/12142_05.jpg" alt="yellowing between veins" ><br>
+                    <label><input type="radio" value="yellowing between veins" name="yellowingVeins">yes</label>
+                    <label><input type="radio" value="no" name="yellowingVeins">no</label>
+            </div>
+            <div class="question8">
+                <p>Q8: Leaf curling?</p>
+                <img  id="img2" src="https://bugguide.net/images/cache/ZZW/LFL/ZZWLFL9LSZFZ5RRH4RKH6R0HGRRHMZLH0ZOLKZ0H5ROZZZOL0ZKHXZ1LJL2LHZELMRELYLELJLULJLJZFLPLXR0HERCL.jpg" alt="curling" ><br>
+                    <label><input type="radio" value="leaf curling" name="leafCurling">yes</label>
+                    <label><input type="radio" value="no" name="leafCurling">no</label>
+            </div>
+            <div class="question9">
+                <p>Q9: Leaf drop after winter?</p>
+                <img  id="img2" src="https://i.ytimg.com/vi/BlwM31dy74Y/sddefault.jpg" alt="leavesdrop" ><br>
+                    <label><input type="radio" value="leaf drop after winter" name="leafDrop">yes</label>
+                    <label><input type="radio" value="no" name="leafDrop">no</label>
+            </div>
+            <div class="question10">
+                <p>Q10: Vein appearing brown or black between the veins?</p>
+                <img  id="img2" src="https://www.plantanswers.com/Articles/Images/Frank-McAllister-Oak-Disease-(5).jpg" alt="black and brown between veins" ><br>
+                    <label><input type="radio" value="vein appearing brown or black between the veins" name="leafBrownBlack">yes</label>
+                    <label><input type="radio" value="no" name="leafBrownBlack">no</label>
+            </div>
+            <br>
+            <p id="clickText2">Why?</p>
+                <div id="leafVeinDisordersText" class="hidden">
+                    Q3 is to determime if the oak tree has the symptoms of tip burn.<br>
+                    If the oak tree has tip burn, then it has veinal necrosis.<br>
+                    Q4 and Q5 are to determine if the oak tree has veinal necrosis.<br>
+                    Q6 is to determine if the oak tree has vein banding.<br>
+                    Q7 and Q8 are to determine if the oak tree has veinal chlorosis.<br>
+                    Q9 and Q10 are to determine if the oak tree has interveinl necrosis.<br>
+                    If the oak tre has veinal necrosis or vein banding or veinal chlorosis or interveinal necrosis, then it has leaf vein disorders.
+                </div>
+        </div>
+    </div>
+
+    <div id="tufting" style="display:none;">
+        <hr>
+        <div class="question11">
+            <p>Q11: Branches exhibit swelling?</p>
+            <img  id="img2" src="https://themasterslawncare.com/sites/default/files/styles/content_width/public/blog/live_oak_gall.jpg.webp?itok=AJohuP-B" alt="branchSwelling" ><br>
+                <label><input type="radio" value="branches exhibit swelling" name="swelling">yes</label>
+                <label><input type="radio" value="no" name="swelling">no</label>
+        </div>
+        <p id="clickText3">Why?</p>
+            <div id="tuftingText" class="hidden">
+            To deterimine if the oak tree has the symptoms of tufting.
+        </div>
+    </div>
+
+    <div id="discoloration" style="display:none;">
+        <hr>
+        <div class="question12">
+            <p>Q12: Leaf spotting and discoloration?</p>
+            <img  id="img2" src="https://plantclinic.tamu.edu/files/2012/06/525.jpg" alt="spotting" ><br>
+                <label><input type="radio" value="leaf spotting and discoloration" name="leafSpotting">yes</label>
+                <label><input type="radio" value="no" name="leafSpotting">no</label>
+        </div>
+        <div class="question13">
+            <p>Q13: Leaf have yellowish patches?</p>
+            <img  id="img2" src="https://palmbeachcountyextension.wordpress.com/wp-content/uploads/2012/04/img_1399.jpg" alt="patches" ><br>
+                <label><input type="radio" value="leaf have yellowish patches" name="yellowishPatches">yes</label>
+                <label><input type="radio" value="no" name="yellowishPatches">no</label>
+        </div>
+        <p id="clickText4">Why?</p>
+            <div id="discolorationText" class="hidden">
+            Q12 is to determine if the oak tree has the symptoms of specking.<br>
+            Q13 is to determine if the oak tree has chlorotic mottling.<br>
+            If oak tree has specking or chlorotic mottling, then it has leaf discoloration symptoms. 
+            </div>
+            <br>
+    </div>
+    </div>
+    </section>
+
+    <div id="result">
+        <button id="button1">Submit</button>
+        <a href="oakWilt2.html"><button type="'button" onclick="oakWilt2.html">Exit</button></a>
+        <div id="Result">
+            <h2 id="result">Result</h2>
+            <p id="output"></p>
+            <p id="protect" class="hidden" onclick=showProtect()>How to protect oak tree?</p>
+            <div class="hidden" id="protectTree">
+            </div>
+        </div>
+        </div>
+
+        
+
+    <p id="howText" onclick=showHow() class="hidden">How</p>
+    <div class="hidden" id="how">
+    </div> 
+
+    <script src="./oakWilt.js"></script>
+</body>
+</html>
